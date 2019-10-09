@@ -1,5 +1,13 @@
-PHP Redis implementation V2.1
+Fork from PHP Redis implementation V2.1
 ==============
+
+- Same code, but as a composer library.
+- Rename class from `redis_cli` to `RedisCli`
+- Make tests work with PHPUnit 8.
+
+
+## Original README:
+
 Yet another php redis implementation.
 Raw wrapper for real [Redis] fans. Main advantages:
 

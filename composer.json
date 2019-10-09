@@ -1,0 +1,16 @@
+{
+    "name": "setastart/galaxia-redis",
+    "type": "library",
+    "description": "Fork of https://github.com/ziogas/PHP-Redis-implementation. Same code but as a composer library.",
+    "keywords": ["redis"],
+
+    "require": {
+        "php": ">=7.1.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Galaxia\\": "src"
+        }
+    }
+}

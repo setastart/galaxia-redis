@@ -1,12 +1,14 @@
 <?php
 
+namespace Galaxia;
+
 /**
  * Raw redis wrapper, all the commands are passed as-is
  * More information and usage examples could be found on https://github.com/ziogas/PHP-Redis-implementation
  *
  * Based on http://redis.io/topics/protocol
  */
-class redis_cli
+class RedisCli
 {
     const INTEGER = ':';
     const INLINE = '+';

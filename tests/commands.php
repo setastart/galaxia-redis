@@ -1,13 +1,15 @@
 <?php
 
-require dirname(__DIR__).DIRECTORY_SEPARATOR.'redis.php';
+use Galaxia\RedisCli;
 
-class commandsTest extends PHPUnit_Framework_TestCase
+require dirname(__DIR__).DIRECTORY_SEPARATOR.'src'.DIRECTORY_SEPARATOR.'RedisCli.php';
+
+class commandsTest extends \PHPUnit\Framework\TestCase
 {
     protected $redis;
 
-    protected function setUp() {
-        $this->redis = new redis_cli('127.0.0.1', 6379);
+    protected function setUp(): void {
+        $this->redis = new RedisCli('127.0.0.1', 6379);
     }
 
     public function testSimpleVariables() {
@@ -98,7 +100,7 @@ class commandsTest extends PHPUnit_Framework_TestCase
         $this->assertSame('1', $value);
     }
 
-    protected function tearDown() {
+    protected function tearDown(): void {
         $keys = array(
             'foo',
             'online_foo',
